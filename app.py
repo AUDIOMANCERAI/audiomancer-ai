@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # CRITICAL: This allows your Vercel frontend to talk to this Render backend.
 # IMPORTANT: Replace 'YOUR_VERCEL_FRONTEND_URL' with your actual Vercel URL.
-CORS(app, resources={r"/*": {"origins": "https://audiomancer-aii.vercel.app/"}}) 
+CORS(app, resources={r"/*": {"origins": "audiomancer-qe9p08z67-mike-hutchings-projects.vercel.app"}}) 
 
 # Use a temporary directory for file processing
 TEMP_DIR = '/tmp/audio' 
@@ -102,6 +102,3 @@ def mix_tracks():
 if __name__ == '__main__':
     # Use 0.0.0.0 to listen on all public IPs, useful for local testing
     app.run(debug=True, host='0.0.0.0', port=5000)
-# --- 5. LOCAL RUNNER (Ignored by Gunicorn, but useful for local testing) ---
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
