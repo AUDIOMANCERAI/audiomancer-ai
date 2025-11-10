@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts"]
+}
+```
+
+## Fix 3: Update your build command
+
+In Netlify, change the build command from:
+```
+npm run build
+```
+
+To:
+```
+npm install && npm run build

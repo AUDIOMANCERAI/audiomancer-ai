@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__) 
 
 # CRITICAL: Replace 'YOUR_VERCEL_FRONTEND_URL' with your actual public Vercel URL
-CORS(app, resources={r"/*": {"origins": "YOUR_VERCEL_FRONTEND_URL"}})
+CORS(app, resources={r"/*": {"origins": "https://vercel.com/mike-hutchings-projects/audiomancer-aii/8rw89P8aayLg8WWggpoMxJAjLbBC"}})
 
 # 2. SIMPLE ROOT ROUTE
 @app.route('/', methods=['GET'])
